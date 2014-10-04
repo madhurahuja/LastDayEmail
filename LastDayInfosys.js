@@ -14,7 +14,7 @@ lastDayModule.service('DataService', function(){
 lastDayModule.controller('ContentController', ['$scope','DataService','$location', function($scope,DataService,$location) {
 
     $scope.placeholders={
-      subject:'Last Day @ Infosys!',
+      subject:'Last Day @ Company!',
       preface:'Roller coaster ride with Infosys comes to an end today...',
       experience: 'I got a chance to work with the best brains @ Infosys...',
       attribution: 'I would like to thank my Managers, Team mates & Friends for making me what I am today!',
