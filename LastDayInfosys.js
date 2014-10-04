@@ -34,7 +34,13 @@ lastDayModule.controller('ContentController', ['$scope','DataService','$location
     $scope.back=function(){
       DataService.setContent(DataService.getContent());
       $location.url("/");
-    }
+    };
+
+    $scope.clearContent=function(){
+        $("form").find("input[type=text], textarea").val("");
+        $scope.content={};
+    };
+
   }]);
 
 lastDayModule.config(['$routeProvider',
