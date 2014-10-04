@@ -1,6 +1,6 @@
 <form class="pure-form pure-form-stacked" ng-submit="createEmail()">
   <fieldset>
-      <div align="center"><button type="submit" class="pure-button pure-button-primary">Generate Email Content</button></div>
+      <div align="center"><button type="submit" class="pure-button pure-button-primary">Generate Email Content</button><button type="button" class="button-warning pure-button">Clear Content</button></div>
 
       <label for="header">Subject</label>
       <textarea placeholder="{{placeholders.subject}}" cols='{{config.cols}}' rows='{{config.rows}}' ng-model="content.subject">{{content.subject}}</textarea>
@@ -20,6 +20,6 @@
       <label for="contact">Contact Details</label>
       <textarea placeholder="{{placeholders.contact}}" cols='{{config.cols}}' rows='{{config.rows}}' ng-model="content.contact">{{content.contact}}</textarea>
 
-      <div align="center"><button type="submit" class="pure-button pure-button-primary">Generate Email Content</button></div>
+      <div align="center"><button type="submit" class="pure-button pure-button-primary">Generate Email Content</button><button type="button" class="pure-button pure-button-warning">Clear Content</button></div>
   </fieldset>
 </form>

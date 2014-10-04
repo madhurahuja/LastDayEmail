@@ -29,17 +29,28 @@ div{
 
 }
 
+#content{
+  font-family:"freight-text-pro",Georgia,Cambria,"Times New Roman",Times,serif;
+  font-style:italic;
+  background-color:white;
+  color:#333333;
+  padding:70px;
+  border:1px dotted #235500;
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
 form{
   width:80%;
   margin-left: auto ;
   margin-right: auto ;
-
 }
+
 h2 {
 		font-size: 2.25em;
 		line-height: 1.5em;
 		letter-spacing: -0.035em;
-	}
+}
 
 	h3 {
 		font-size: 1.75em;

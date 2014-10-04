@@ -1,6 +1,17 @@
 var lastDayModule = angular.module('lastDayInfosysApp', ['ngRoute']);
 
-lastDayModule.controller('ContentController', ['$scope', function($scope) {
+lastDayModule.service('DataService', function(){
+  var content={};
+  this.setContent = function(contentVar){
+    content = contentVar;
+  };
+
+  this.getContent = function(){
+    return content;
+  }
+});
+
+lastDayModule.controller('ContentController', ['$scope','DataService','$location', function($scope,DataService,$location) {
 
     $scope.placeholders={
       subject:'Last Day @ Infosys!',
@@ -13,13 +24,17 @@ lastDayModule.controller('ContentController', ['$scope', function($scope) {
 
     $scope.config={rows:'2',cols:'100'};
 
-    $scope.content={subject:'',preface:'',experience:'',attribution:'',conclusion:'',contact:''};
+    $scope.content=DataService.getContent();
 
     $scope.createEmail=function() {
-      console.log($scope.content);
-      $('#my_popup').popup('show');
-
+      DataService.setContent($scope.content);
+      $location.url("/compile");
     };
+
+    $scope.back=function(){
+      DataService.setContent(DataService.getContent());
+      $location.url("/");
+    }
   }]);
 
 lastDayModule.config(['$routeProvider',
