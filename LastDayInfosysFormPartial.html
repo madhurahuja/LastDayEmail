@@ -1,0 +1,25 @@
+<form class="pure-form pure-form-stacked" ng-submit="createEmail()">
+  <fieldset>
+      <div align="center"><button type="submit" class="pure-button pure-button-primary">Generate Email Content</button></div>
+
+      <label for="header">Subject</label>
+      <textarea placeholder="{{placeholders.subject}}" cols='{{config.cols}}' rows='{{config.rows}}' ng-model="content.subject">{{content.subject}}</textarea>
+
+      <label for="preface">Preface</label>
+      <textarea placeholder="{{placeholders.preface}}" cols='{{config.cols}}' rows='{{config.rows}}' ng-model="content.preface">{{content.preface}}</textarea>
+
+      <label for="experience">Experience</label>
+      <textarea placeholder="{{placeholders.experience}}" cols='{{config.cols}}' rows='{{config.rows}}' ng-model="content.experience">{{content.experience}}</textarea>
+
+      <label for="attribution">Attribution</label>
+      <textarea placeholder="{{placeholders.attribution}}" cols='{{config.cols}}' rows='{{config.rows}}' ng-model="content.attribution">{{content.attribution}}</textarea>
+
+      <label for="conclusion">Conclusion</label>
+      <textarea placeholder="{{placeholders.conclusion}}" cols='{{config.cols}}' rows='{{config.rows}}' ng-model="content.conclusion">{{content.conclusion}}</textarea>
+
+      <label for="contact">Contact Details</label>
+      <textarea placeholder="{{placeholders.contact}}" cols='{{config.cols}}' rows='{{config.rows}}' ng-model="content.contact">{{content.contact}}</textarea>
+
+      <div align="center"><button type="submit" class="pure-button pure-button-primary">Generate Email Content</button></div>
+  </fieldset>
+</form>
